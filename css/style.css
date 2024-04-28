@@ -73,6 +73,7 @@ a {
 
 /* Header */
 header {
+    width: 100vw;
     position: fixed;
     display: flex;
     justify-content: space-between;
