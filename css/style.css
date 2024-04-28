@@ -499,8 +499,8 @@ footer {
     /* Lightbox */
     .SectionProjects-lightbox {
         position: fixed;
-        top: 20%;
-        left: 25%;
+        top: 50%;
+        left: 50%;
         transform: translate(-50%, -50%);
         width: 50%;
         max-width: 50rem;
