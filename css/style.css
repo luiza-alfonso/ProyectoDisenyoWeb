@@ -50,6 +50,7 @@ html {
 }
 
 body {
+    width: 100vw;
     font-family: "Montserrat";
     color: var(--var-color-black);
     margin: 0;
