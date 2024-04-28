@@ -500,8 +500,10 @@ footer {
         position: fixed;
         top: 20%;
         left: 25%;
+        transform: translate(-50%, -50%);
         width: 50%;
-        padding: 0 2% 2%;
+        max-width: 50rem;
+        padding: 0 2%;
         background-color: var(--var-color-light-gray);
         z-index: 992;
         display: flex;
