@@ -499,11 +499,11 @@ footer {
     /* Lightbox */
     .SectionProjects-lightbox {
         position: fixed;
-        top: 10%;
+        top: 25%;
         left: 25%;
         width: 50%;
-        max-width: 50rem;
-        padding: 0 2%;
+        max-width: 70rem;
+        padding: 0 2% 2%;
         background-color: var(--var-color-light-gray);
         z-index: 992;
         display: flex;
