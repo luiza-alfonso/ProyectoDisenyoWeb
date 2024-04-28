@@ -501,7 +501,7 @@ footer {
         position: fixed;
         top: 20%;
         left: 15%;
-        width: 70%;
+        width: 42.75rem;
         padding: 0 2% 2%;
         background-color: var(--var-color-light-gray);
         z-index: 992;
@@ -640,24 +640,6 @@ footer {
 
 /* Dispositivos muy grandes (desktops grandes, 1200px o más) */
 @media (min-width: 1200px) {
-    /* Lightbox */
-    .SectionProjects-lightbox {
-        position: fixed;
-        top: 20%;
-        left: 15%;
-        width: 60%;
-        padding: 0 2% 2%;
-        background-color: var(--var-color-light-gray);
-        z-index: 992;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        transform: scale(1);
-        transition: all 0.5s ease;
-        pointer-events: none;
-    }
 }
 
 /* Dispositivos extra grandes (desktops muy grandes, 1400px o más) */
