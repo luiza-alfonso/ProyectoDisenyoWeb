@@ -501,7 +501,7 @@ footer {
         position: fixed;
         top: 20%;
         left: 15%;
-        width: 42.75rem;
+        width: 50%;
         padding: 0 2% 2%;
         background-color: var(--var-color-light-gray);
         z-index: 992;
