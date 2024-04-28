@@ -562,6 +562,7 @@ footer {
         padding-left: 0;
         list-style-type: none;
         gap: 0.8rem;
+        margin: 0;
     }
 
     .SectionProjects-btn--lightbox {
