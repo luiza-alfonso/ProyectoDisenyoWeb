@@ -442,7 +442,7 @@ footer {
         font-size: var(--step-2);
         line-height: var(--step-3);
         padding: 0;
-        padding-right: 1rem;
+        padding-right: 2rem;
         position: static;
         transform: none;
         transition: none;
