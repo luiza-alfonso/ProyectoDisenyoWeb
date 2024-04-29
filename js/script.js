@@ -5,12 +5,12 @@ const logoAlt = document.querySelector('.SectionH1-h1')
 const backgroundDiv = document.querySelector('.SectionH1-bg');
 
 // Una función que añade una clase al h1 cuando la página se carga
-document.addEventListener('load', function () {
+document.addEventListener('DOMContentLoaded', function () {
     logoAlt.classList.add('isLoaded');
 });
 
 // Una función que añade una clase a la imagen de fondo cuando la página se carga
-document.addEventListener('load', function () {
+document.addEventListener('DOMContentLoaded', function () {
     backgroundDiv.classList.add('isLoaded');
 });
 
