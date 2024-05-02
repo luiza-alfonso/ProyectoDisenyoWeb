@@ -88,7 +88,7 @@ header {
 }
 
 .Header-img {
-    width: 90%;
+    width: 12rem;
     padding: .9375rem;
 }
 
@@ -357,7 +357,7 @@ footer {
 }
 
 .Footer-img--logo {
-    width: 80%;
+    width: 10rem;
     padding: .9375rem;
 }
 
