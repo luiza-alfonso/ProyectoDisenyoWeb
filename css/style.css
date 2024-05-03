@@ -1,4 +1,13 @@
-/* LIMPAR FONTES NÃO USADAS */
+/* style.css
+- Fuente
+- Reset / Normalizar
+- Variables
+- Global
+- Header
+- Main
+- Footer
+*/
+
 @font-face {
     font-family: "Montserrat";
     src: url('../fonts/Montserrat-Regular.ttf'),
@@ -44,9 +53,13 @@ html {
     /* Step 6: 47.7757px → 61.0352px */
     --step-6: clamp(2.986rem, 2.6093rem + 1.0045vi, 3.8147rem);
     --var-color-white: #ffffff;
+    /* Color de fondo */
     --var-color-black: #000000;
+    /* Color de las tipografías */
     --var-color-gray: #707070;
+    /* Color del texto de la sección Contact y de los botones del lightbox */
     --var-color-light-gray: #F6F6F6;
+    /* Color de fondo del lightbox, del footer y del botón para cerrar el lightbox*/
 }
 
 body {
@@ -72,7 +85,18 @@ a {
     color: inherit;
 }
 
-/* Header */
+/* Header
+Descripción: estilos para el header con menú hamburguesa
+Estructura: 
+    - header
+    - Header-pic
+    - Header-img
+    - Header-nav
+    - Header-a
+    - Header-button
+    - Header-span
+    - Header-ul
+*/
 header {
     width: 100vw;
     position: fixed;
@@ -88,7 +112,7 @@ header {
 }
 
 .Header-img {
-    width: 12rem;
+    width: clamp(3.75rem, 0rem + 10vw, 12rem);
     padding: .9375rem;
 }
 
@@ -108,6 +132,7 @@ header {
 
 .Header-nav a:hover {
     text-decoration: underline;
+    /* Estilo al flotar sobre el elemento */
 }
 
 .Header-button {
@@ -133,18 +158,20 @@ header {
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background-color 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
 }
 
-/* Clase .isClicked añadida con JavaScript */
+/* Clase .isClicked añadida con JavaScript para cambiar la aparencia del botón a un botón de cerrar */
 .Header-button.isClicked .Header-span {
     opacity: 1;
     transform: rotate(45deg) translate(0, -190%);
     background-color: #000;
 }
 
+/* Transformación del botón cuando la clase .isClicked es añadida */
 .Header-button.isClicked span:nth-child(3) {
     opacity: 0;
     transform: rotate(0deg) scale(0.2, 0.2);
 }
 
+/* Transformación del botón cuando la clase .isClicked es añadida */
 .Header-button.isClicked span:nth-child(2) {
     transform: rotate(-45deg) translate(0, 110%);
 }
@@ -162,6 +189,7 @@ header {
     -webkit-font-smoothing: antialiased;
     transform-origin: 0% 0%;
     transform: translate(0, -250%);
+    /* Transformación para que la lista no aparezca cuando el menú hamburguesa esté cerrado */
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 }
 
@@ -169,48 +197,65 @@ header {
     transform: none;
 }
 
-/* Imagen de fondo */
-.SectionH1 {
+/* Sección Title
+Descripción: estilos para la primera sección con el h1 y una imágen de fondo
+Estructura: 
+    - SectionTitle
+    - SectionTitle-h1
+    - SectionTitle-bg
+*/
+.SectionTitle {
     display: block;
 }
 
-.SectionH1-h1 {
+.SectionTitle-h1 {
     width: 100vw;
     padding: 0 7%;
     position: absolute;
     top: 50%;
     left: 50%;
     opacity: 0;
+    /* Opacidade 0 para que no aparezca al cargar la página */
     transform: translate(-50%, -50%);
+    /* Transformación para cambiar la posición del h1 */
     transition: opacity 3s ease-in;
+    /* 3s de duración para obtener el efecto deseado de una película */
 }
 
-.SectionH1-h1.isLoaded {
+.SectionTitle-h1.isLoaded {
     opacity: 1;
     z-index: 994;
 }
 
-.SectionH1-bg {
+.SectionTitle-bg {
     height: 80vh;
     background-image: url(../img/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg);
+    /* Imágen que se adapta a los modos horizontales y verticales de pantalla */
     background-size: cover;
     background-position: center;
     background-repeat: none;
     transform: translate(0, 0%);
     transition: opacity 2s ease-in;
+    /* 2s de duración para que se pueda ver la imágen antes de que cambie la opacidad */
     opacity: 1;
 }
 
-.SectionH1-bg.isLoaded {
+.SectionTitle-bg.isLoaded {
     background-color: var(--var-color-white);
     opacity: 0.3;
     z-index: 993;
 }
 
-/* Sección About */
+/* Sección About 
+Descripción: estilos para la sección compuesta por contenido informativo acerca de la empresa
+Estructura: 
+    - SectionAbout-img
+    - ectionAbout-article--nosotros
+*/
 .SectionAbout-img {
     width: 100%;
     transform: scale(1);
+    /* transformación en el tamaño de las imágenes para crear dinamismo */
     transition: transform 0.5s ease-in-out;
 }
 
@@ -222,10 +267,20 @@ header {
     margin-top: 4rem;
 }
 
-/* Sección Projects */
+/* Sección Projects 
+Descripción: estilos para la sección con las imágenes de proyectos de la empresa
+Estructura: 
+    - SectionProjects-img
+    - SectionProjects-article
+    - SectionProjects-h2
+    - SectionProjects-overlay
+    - SectionProjects-lightbox
+    - large
+*/
 .SectionProjects-img {
     width: 100%;
     transform: scale(1);
+    /* transformación en el tamaño de las imágenes para permitir ver más detalles de los proyectos */
     transition: transform 0.5s ease-in-out;
 }
 
@@ -244,6 +299,7 @@ header {
     margin-bottom: 0;
 }
 
+/* Todas las clases que tienen que ver con el lightbox tienen opacidad 0 y tamaño 0 para garantizar que no influyan en la apariencia de la versión para dispositivos pequeños */
 .SectionProjects-overlay {
     opacity: 0;
 }
@@ -253,18 +309,37 @@ header {
     height: 0;
     opacity: 0;
 }
+
 .large {
     width: 0;
     height: 0;
 }
 
-/* Sección Map */
+/* Sección Map 
+Descripción: estilo para que el mapa de Google Maps sea del mismo ancho que las otras secciones.
+Estructura: 
+    - SectionMap-iframe
+*/
 .SectionMap-iframe {
     width: 100%;
     height: 15rem;
 }
 
-/* Sección Contact */
+/* Sección Contact 
+Descripción: estilos para la sección con enlaces de contacto de la empresa y un formulario.
+Estructura: 
+    - SectionContact-article
+    - SectionContact-a
+    - SectionContact-p--address
+    - gray
+    - SectionContact-help
+    - large
+    - SectionContact-form
+    - hidden
+    - SectionContact-input
+    - SectionContact-text
+    - SectionContact-submit
+*/
 .SectionContact-article {
     display: flex;
     flex-flow: column nowrap;
@@ -276,7 +351,8 @@ header {
 }
 
 .SectionContact-a:hover {
-    text-decoration: dashed;
+    text-decoration: underline;
+    /* Estilo al flotar sobre el elemento */
 }
 
 .SectionContact-p--address {
@@ -307,6 +383,16 @@ header {
     padding: 0 4rem;
 }
 
+.hidden {
+    position: absolute;
+    /* Oculta todas las etiquetas */
+    clip: rect(1px 1px 1px 1px);
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
 .SectionContact-input {
     width: 100%;
     border: 0 none;
@@ -325,6 +411,7 @@ header {
     font-family: inherit;
 }
 
+/* Cambia el estilo por defecto del formulario */
 .SectionContact-input:focus,
 .SectionContact-text:focus {
     outline: none;
@@ -341,12 +428,20 @@ header {
     font-family: inherit;
 }
 
+/* Invierte los colores del elemento */
 .SectionContact-submit:hover {
     color: var(--var-color-white);
     background-color: var(--var-color-black);
 }
 
-/* Footer */
+/* Footer 
+Descripción: estilos para el footer con el logo y una lista con imágenes.
+Estructura: 
+    - footer
+    - Footer-img--logo
+    - Footer-ul
+    - Footer-img
+*/
 footer {
     width: 100vw;
     display: flex;
@@ -357,8 +452,7 @@ footer {
 }
 
 .Footer-img--logo {
-    width: 10rem;
-    padding: .9375rem;
+    width: clamp(3.125rem, 0rem + 8.3333vw, 10rem);
 }
 
 .Footer-ul {
@@ -381,45 +475,42 @@ footer {
 
     /* Sección Map */
     .SectionMap-iframe {
-        width: 100%;
         min-height: 20rem;
+        /* Cambio en la altura para mantener una cierta proporción */
     }
 }
 
 /* Dispositivos medianos (tablets, 768px o más) */
 @media (min-width: 768px) {
+
+    /* Cambio en el padding y margin para mantener una cierta proporción */
     .spacing {
         padding: 0 6rem;
         margin: 6rem 0 2rem;
     }
 
-    /* Imagen de fondo */
+    /* Imagen de fondo en modo horizontal */
     .SectionH1-bg {
         width: 100vw;
-        background-image: url(../img/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg);
-        background-size: cover;
         background-position: top 25% left 0;
-        background-repeat: none;
-        transform: translate(0, 0%);
-        transition: opacity 2s ease-in;
-        opacity: 1;
     }
 
     /* Sección Projects */
     .SectionProjects-article {
         padding-top: 4rem;
+        /* Aumenta el espacio */
     }
 
     /* Sección Map */
     .SectionMap-iframe {
-        width: 100%;
         min-height: 30rem;
+        /* Cambio en la altura para mantener una cierta proporción */
     }
 
     /* Sección Contacto */
     .SectionContact-form {
-        width: 100vw;
         padding: 0 6rem;
+        /* Cambio en el padding para mantener una cierta proporción */
     }
 }
 
@@ -427,6 +518,7 @@ footer {
 @media (min-width: 992px) {
 
     /* Header */
+    /* Oculta menu hamburguesa */
     .Header-button,
     .Header-span {
         width: 0;
@@ -435,6 +527,7 @@ footer {
         padding: 0;
     }
 
+    /* Posiciona la lista de la navegación en el header */
     .Header-ul {
         display: flex;
         justify-content: flex-end;
@@ -449,6 +542,7 @@ footer {
     }
 
     /* Sección About */
+    /* Añade display flex para cambiar el estilo de la sección */
     .SectionAbout-article,
     .SectionAbout-article--nosotros {
         width: 100%;
@@ -491,11 +585,13 @@ footer {
         object-fit: cover;
     }
 
+    /* Quita la transformación de las imágenes */
     .SectionAbout-img:hover {
         transform: none;
     }
 
     /* Sección Projects */
+    /* Añade display grid para la galería de imágenes */
     .SectionProjects-gallery {
         display: grid;
         gap: 1rem;
@@ -521,6 +617,7 @@ footer {
         opacity: 0;
         transform: scale(1);
         transition: all 0.5s ease;
+        /* Transición para que el lightbox aparezca de manera fluida */
         pointer-events: none;
     }
 
@@ -529,6 +626,11 @@ footer {
         -webkit-transform: scale(1);
         transform: scale(1);
         pointer-events: auto;
+    }
+
+    .SectionProjects-lightbox.active~header {
+        display: none;
+        /* Oculta el header cuando el lightbox aparece para que la imágen esté en absoluta prominencia */
     }
 
     .SectionProjects-btn {
@@ -542,18 +644,17 @@ footer {
 
     .SectionProjects-article:hover {
         cursor: pointer;
+        /* Cambia el cursor para que el usuario sepa que se puede hacer clic en las imágenes */
     }
 
     .close {
         width: 5rem;
         color: var(--var-color-black);
+        transform: none;
         transition: all 0.4s ease;
+        /* Transición para que el lightbox se cierre de manera fluida */
         background-color: var(--var-color-white);
         cursor: pointer;
-    }
-
-    .close:hover {
-        transition: all 0.4s ease;
     }
 
     .large {
@@ -582,6 +683,7 @@ footer {
         border-style: none;
         border-radius: 50%;
         transform: scale(1);
+        /* Cambia el tamaño del botón de la imágen en el lightbox */
         transition: transform 0.3s ease-in-out;
         transform-origin: center;
     }
@@ -592,11 +694,12 @@ footer {
 
     .SectionProjects-btn--lightbox.active {
         background-color: var(--var-color-black);
+        /* Cambia el color del botón de la imágen seleccionada en el lightbox */
         transform: scale(1.5);
     }
 
-    /* Overlay para el fondo del lightbox */
-    .SectionProjects-lightbox.active + .SectionProjects-overlay {
+    /* Overlay para el fondo cuando el lightbox esté activo */
+    .SectionProjects-lightbox.active+.SectionProjects-overlay {
         position: fixed;
         top: 0;
         left: 0;
@@ -607,28 +710,33 @@ footer {
         opacity: 1;
     }
 
-    /* Sección Map */
-    .SectionMap-iframe {
-        width: 100%;
-        min-height: 30rem;
-    }
-
     /* Sección Contact */
+    /* Añade display flex para que los artículos aparezcan uno al lado del otro */
     .SectionContact {
         flex-flow: row nowrap;
         justify-content: space-between;
+        align-items: flex-start;
         margin-bottom: 10%;
     }
+
     .SectionContact-info {
         width: 30%;
     }
+
     .SectionContact-article {
         align-items: flex-start;
     }
+
+    .SectionContact-h3 {
+        margin-top: 0;
+    }
+
     .SectionContact-help {
         width: 50%;
         margin: 0;
     }
+
+    /* Añade display grid para que los elementos ocupen diferentes colunas y líneas */
     .SectionContact-form {
         width: 100%;
         padding: 0;
@@ -637,12 +745,19 @@ footer {
         grid-template-columns: repeat(2, 1fr);
         padding: 0;
     }
-    .SectionContact-input:nth-child(3),
-    .SectionContact-input:nth-child(4),
-    .SectionContact-input:nth-child(5),
+
+    .SectionContact-input:nth-child(2),
+    .SectionContact-input:nth-child(4) {
+        margin-bottom: 1rem;
+    }
+
+    .SectionContact-input:nth-child(6),
+    .SectionContact-input:nth-child(8),
+    .SectionContact-input:nth-child(10),
     .SectionContact-text {
         grid-column: span 2;
     }
+
     .SectionContact-submit {
         grid-column: 2 / 3;
     }
