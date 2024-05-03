@@ -1,8 +1,8 @@
 // Header
 // Elemento del h1 
-const logoAlt = document.querySelector('.SectionH1-h1')
+const logoAlt = document.querySelector('.SectionTitle-h1');
 // Elemento de la imagen de fondo
-const backgroundDiv = document.querySelector('.SectionH1-bg');
+const backgroundDiv = document.querySelector('.SectionTitle-bg');
 
 // Una función que añade una clase al h1 cuando la página se carga
 document.addEventListener('DOMContentLoaded', function () {
@@ -16,33 +16,36 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Menu hamburguesa
 // Elemento del menu en la navegación
-const headerBtn = document.querySelector('.Header-button')
+const headerBtn = document.querySelector('.Header-button');
 
 // Una función que añade y quita una clase al botón cuando el usuario hace clic para mostrar y ocultar la navegación en dispositivos pequeños
 headerBtn.addEventListener('click', function () {
     // Aplicación de la clase al botón
     headerBtn.classList.toggle('isClicked')
     console.log(headerBtn)
-})
+});
 
 // Lightbox
 // Selección de todos los artículos
-const articleBtn = document.querySelectorAll('.SectionProjects-article')
+const articleBtn = document.querySelectorAll('.SectionProjects-article');
 
 // Elemento del lightbox
-const lightbox = document.querySelector('.SectionProjects-lightbox')
+const lightbox = document.querySelector('.SectionProjects-lightbox');
 
 // Elemento del titular del lightbox
 const lightboxTitle = lightbox.querySelector('.SectionProjects-h3');
 
 // Elemento de la imagen en el lightbox
-const large = lightbox.querySelector('.large')
+const large = lightbox.querySelector('.large');
 
 // Elemento del botón en el lightbox
-const closeBtn = lightbox.querySelector('.SectionProjects-btn')
+const closeBtn = lightbox.querySelector('.SectionProjects-btn');
 
 // Elemento del botón del slider en el lightbox
-const sliderBtn = lightbox.querySelectorAll('.SectionProjects-btn--lightbox')
+const sliderBtn = lightbox.querySelectorAll('.SectionProjects-btn--lightbox');
+
+// Elemento del header
+const header = document.querySelector('.Header');
 
 // Una función que añade y quita una clase al artículo cuando el usuario hace clic para mostrar y ocultar el lightbox en dispositivos grandes
 articleBtn.forEach((eachArticle, i) => {
@@ -60,12 +63,15 @@ articleBtn.forEach((eachArticle, i) => {
         large.setAttribute('src', imgSrc);
         // Determina el titular dentro del lightbox
         lightboxTitle.textContent = articleTitle;
+        // Añade una clase al header
+        header.classList.add('hidden');
     });
 });
 
-// Evento que quita una clase al botón de cerrar cuando el usuario hace clic para cerrar el lightbox
+// Evento que quita una clase al botón de cerrar y al header cuando el usuario hace clic para cerrar el lightbox
 closeBtn.addEventListener('click', () => {
     lightbox.classList.remove('active');
+    header.classList.remove('hidden');
 });
 
 // Botones Lightbox
@@ -92,7 +98,7 @@ function SliderBtn(e) {
     lightbox.classList.add('active');
     large.setAttribute('src', imgSrc);
     lightboxTitle.textContent = articleTitle;
-}
+};
 
 // Añade una clase a cada botón cuando el usuario hace clic
 sliderBtn.forEach((btn) => {
