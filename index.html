@@ -19,20 +19,22 @@ Estructura general:
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
     <title>Estudio Moderna Arquitectura</title>
+    <link rel="preload" as="image" href="img/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash-vertical.webp">
+    <link rel="preload" as="image" href="img/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash-horizontal.webp">
 </head>
 
 <body class="Body">
     <!-- Header 
     Descripción: en el encabezado tenemos el logo y la navegación de la página para que el usuario pueda acceder al contenido facilmente -->
     <header class="Header">
-        <picture class="Header-pic"><img src="img/Proyecto_Final-logo 1_2.svg" alt="Logo Moderna Arquitectura"
+        <picture class="Header-pic"><img src="img/proyecto_final-logo-1_2.svg" alt="Logo Moderna Arquitectura"
                 title="Logo Moderna Arquitectura" class="Header-img" loading="lazy"></picture>
         <!-- Navegación 
         Descripción: botón para hacer más fácil la navegación en dispositivos pequeños y lista con hipervínculos a ubicaciones en la misma página -->
         <nav class="Header-nav">
             <!-- Botón con 3 etiquetas span que quedará oculto en las webqueries para dispositivos grandes -->
             <!-- TODO: Añadir clase a este botón con JavaScript -->
-            <button class="Header-button">
+            <button class="Header-button" title="Botón del menú">
                 <span class="Header-span"></span>
                 <span class="Header-span"></span>
                 <span class="Header-span"></span>
@@ -54,16 +56,16 @@ Estructura general:
         <!-- FIX: Arreglar el snippet de este <div> para que se añada una clase al cargar la página -->
         <section class="SectionTitle">
             <h1 class="SectionTitle-h1">
-                <picture class="SectionTitle-pic"><img src="img/Proyecto_Final-logo 2.svg" alt="Moderna Arquitectura"
+                <picture class="SectionTitle-pic"><img src="img/proyecto_final-logo-2.svg" alt="Moderna Arquitectura"
                         class="SectionTitle-img" title="Moderna Arquitectura" loading="lazy"></picture>
             </h1>
-            <div class="SectionTitle-bg"></div>
+            <div class="SectionTitle-bg" ></div>
         </section>
         <!-- Sección About
         Descripción: en esta sección tenemos dos artículos con textos descriptivos acerca de la empresa. Cada artículo contiene una imagen, un título y un bloque de texto -->
         <section id="nosotros" class="SectionAbout spacing">
             <article class="SectionAbout-article">
-                <picture class="SectionAbout-picture"><img src="img/house-7310177_1280.jpg" alt="Estilo Arquitectónico"
+                <picture class="SectionAbout-picture"><img src="img/house-7310177_1280.webp" alt="Estilo Arquitectónico"
                         title="Estilo Arquitectónico" class="SectionAbout-img" loading="lazy"></picture>
                 <div class="SectionAbout-text">
                     <h2 class="SectionAbout-h2 left">El Estilo Moderno</h2>
@@ -75,7 +77,7 @@ Estructura general:
                 </div>
             </article>
             <article class="SectionAbout-article--nosotros">
-                <picture class="SectionAbout-picture"><img src="img/lyubomyr-lou-reverchuk-rtD_lcsN6_U-unsplash.jpg"
+                <picture class="SectionAbout-picture"><img src="img/lyubomyr-lou-reverchuk-rtD_lcsN6_U-unsplash.webp"
                         alt="El Estúdio" title="El Estúdio" class="SectionAbout-img" loading="lazy"></picture>
                 <div class="SectionAbout-text">
                     <h2 class="SectionAbout-h2 right">Sobre Nosotros</h2>
@@ -92,46 +94,46 @@ Estructura general:
             <h2 class="SectionProjects-h2">Nuestros Proyectos</h2>
             <div class="SectionProjects-gallery">
                 <article class="SectionProjects-article">
-                    <picture class="SectionProjects-picture"><img src="img/r-architecture-2gDwlIim3Uw-unsplash.jpg"
+                    <picture class="SectionProjects-picture"><img src="img/r-architecture-2gDwlIim3Uw-unsplash.webp"
                             alt="Casa moderna Evoque" class="SectionProjects-img" title="Casa moderna Evoque"
                             loading="lazy"></picture>
                     <h3 class="SectionProjects-h3">Casa Evoque</h3>
                 </article>
                 <article class="SectionProjects-article">
-                    <picture class="SectionProjects-picture"><img src="img/webaliser-_TPTXZd9mOo-unsplash.jpg"
+                    <picture class="SectionProjects-picture"><img src="img/webaliser-_TPTXZd9mOo-unsplash.webp"
                             alt="Casa moderna Aurora" class="SectionProjects-img" title="Casa moderna Aurora"
                             loading="lazy"></picture>
                     <h3 class="SectionProjects-h3">Casa Aurora</h3>
                 </article>
                 <article class="SectionProjects-article">
-                    <picture class="SectionProjects-picture"><img src="img/r-architecture-T6d96Qrb5MY-unsplash.jpg"
+                    <picture class="SectionProjects-picture"><img src="img/r-architecture-T6d96Qrb5MY-unsplash.webp"
                             alt="Sala Esencia" class="SectionProjects-img" title="Sala Esencia" loading="lazy">
                     </picture>
                     <h3 class="SectionProjects-h3">Sala Esencia</h3>
                 </article>
                 <article class="SectionProjects-article">
                     <picture class="SectionProjects-picture"><img
-                            src="img/frames-for-your-heart-mR1CIDduGLc-unsplash.jpg" alt="Casa moderna Horizonte"
+                            src="img/frames-for-your-heart-mR1CIDduGLc-unsplash.webp" alt="Casa moderna Horizonte"
                             class="SectionProjects-img" title="Casa moderna Horizonte" loading="lazy"></picture>
                     <h3 class="SectionProjects-h3">Casa Horizonte</h3>
                 </article>
                 <article class="SectionProjects-article">
-                    <picture class="SectionProjects-picture"><img src="img/r-architecture-KQPEhYweLrQ-unsplash.jpg"
+                    <picture class="SectionProjects-picture"><img src="img/r-architecture-KQPEhYweLrQ-unsplash.webp"
                             alt="Casa moderna Vital" class="SectionProjects-img" title="Casa moderna Vital"
                             loading="lazy"></picture>
                     <h3 class="SectionProjects-h3">Casa Vital</h3>
                 </article>
                 <article class="SectionProjects-article">
-                    <picture class="SectionProjects-picture"><img src="img/r-architecture-wDDfbanbhl8-unsplash.jpg"
+                    <picture class="SectionProjects-picture"><img src="img/r-architecture-wDDfbanbhl8-unsplash.webp"
                             alt="Cocina Minimal" class="SectionProjects-img" title="Cocina Minimal" loading="lazy">
                     </picture>
                     <h3 class="SectionProjects-h3">Cocina Minimal</h3>
                 </article>
             </div>
             <!-- FIX: Arreglar el snippet de este <div> para que se añada clases al hacer click y que se oculte en dispositivos pequeños -->
-            <div class="SectionProjects-lightbox">
+            <div class="SectionProjects-lightbox flex-lightbox">
                 <button class="SectionProjects-btn">&#x2715;</button>
-                <picture class="SectionProjects-picture"><img src="img/r-architecture-2gDwlIim3Uw-unsplash.jpg"
+                <picture class="SectionProjects-picture"><img src="img/r-architecture-2gDwlIim3Uw-unsplash.webp"
                         alt="Casa moderna Evoque" class="large" title="Casa moderna Evoque" loading="lazy"></picture>
                 <h3 class="SectionProjects-h3">Casa Evoque</h3>
                 <ul class="SectionProjects-ul">
@@ -164,7 +166,7 @@ Estructura general:
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3079.5716246976094!2d-0.3584171240350783!3d39.47900527160571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6048989db2f393%3A0xdf6ec125393abc8a!2sAv.%20Primado%20Reig%2C%20189%2C%20Benimaclet%2C%2046020%20Valencia!5e0!3m2!1ses!2ses!4v1714212919489!5m2!1ses!2ses"
                 style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                class="SectionMap-iframe"></iframe>
+                class="SectionMap-iframe" title="Mapa"></iframe>
         </section>
         <!-- Sección Contact
         Descripción: en esta sección tenemos dos divs, uno con articles que contienen informaciones de contacto y otro con un formulario de contacto. -->
@@ -210,7 +212,7 @@ Estructura general:
                     <input type="tel" name="telefono" id="telefono" class="SectionContact-input" placeholder="Teléfono">
                     <label for="asunto" class="SectionContact-label hidden">Asunto</label>
                     <select name="asunto" id="asunto" class="SectionContact-input" required>
-                        <option value="subject" disabled selected>Asunto*</option>
+                        <option value="" disabled selected>Asunto*</option>
                         <option value="informacion">Información sobre Servicios</option>
                         <option value="presupesto">Solicitud de Presupuesto</option>
                         <option value="colaboracion">Colaboración Profesional</option>
@@ -225,7 +227,7 @@ Estructura general:
         </section>
     </main>
     <footer class="Footer">
-        <picture class="Footer-pic"><img src="img/Proyecto_Final-logo 1_2.svg" alt="Logo Moderna Arquitectura"
+        <picture class="Footer-pic"><img src="img/proyecto_final-logo-1_2.svg" alt="Logo Moderna Arquitectura"
                 title="Logo Moderna Arquitectura" class="Footer-img--logo" loading="lazy"></picture>
         <ul class="Footer-ul">
             <li class="Footer-li"><a href="#" title="Nosotros" class="Footer-a">
@@ -234,7 +236,7 @@ Estructura general:
                 </a></li>
             <li class="Footer-li"><a href="#" title="Proyectos" class="Footer-a">
                     <picture class="Footer-picture"><img src="img/instagram-svgrepo-com.svg" alt="Instagram"
-                            class="Footer-img" class="Instagram"></picture>
+                            class="Footer-img" title="Instagram"></picture>
                 </a></li>
             <li class="Footer-li"><a href="#" title="Dirección" class="Footer-a">
                     <picture class="Footer-picture"><img src="img/pinterest-180-svgrepo-com.svg" alt="Pinterest"
