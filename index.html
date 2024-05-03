@@ -52,12 +52,12 @@ Estructura general:
         <!-- Sección H1 
         Descripción: en esta sección tenemos un logo alternativo y una imagen de fondo con transición para que se parezca a una película -->
         <!-- FIX: Arreglar el snippet de este <div> para que se añada una clase al cargar la página -->
-        <section class="SectionH1">
-            <h1 class="SectionH1-h1">
-                <picture class="SectionH1-pic"><img src="img/Proyecto_Final-logo 2.svg" alt="Moderna Arquitectura"
-                        class="SectionH1-img" title="Moderna Arquitectura" loading="lazy"></picture>
+        <section class="SectionTitle">
+            <h1 class="SectionTitle-h1">
+                <picture class="SectionTitle-pic"><img src="img/Proyecto_Final-logo 2.svg" alt="Moderna Arquitectura"
+                        class="SectionTitle-img" title="Moderna Arquitectura" loading="lazy"></picture>
             </h1>
-            <div class="SectionH1-bg"></div>
+            <div class="SectionTitle-bg"></div>
         </section>
         <!-- Sección About
         Descripción: en esta sección tenemos dos artículos con textos descriptivos acerca de la empresa. Cada artículo contiene una imagen, un título y un bloque de texto -->
@@ -136,22 +136,22 @@ Estructura general:
                 <h3 class="SectionProjects-h3">Casa Evoque</h3>
                 <ul class="SectionProjects-ul">
                     <li class="SectionProjects-li">
-                        <button class="SectionProjects-btn--lightbox"></button>
+                        <button class="SectionProjects-btn--lightbox">&#8203;</button>
                     </li>
                     <li class="SectionProjects-li">
-                        <button class="SectionProjects-btn--lightbox"></button>
+                        <button class="SectionProjects-btn--lightbox">&#8203;</button>
                     </li>
                     <li class="SectionProjects-li">
-                        <button class="SectionProjects-btn--lightbox"></button>
+                        <button class="SectionProjects-btn--lightbox">&#8203;</button>
                     </li>
                     <li class="SectionProjects-li">
-                        <button class="SectionProjects-btn--lightbox"></button>
+                        <button class="SectionProjects-btn--lightbox">&#8203;</button>
                     </li>
                     <li class="SectionProjects-li">
-                        <button class="SectionProjects-btn--lightbox"></button>
+                        <button class="SectionProjects-btn--lightbox">&#8203;</button>
                     </li>
                     <li class="SectionProjects-li">
-                        <button class="SectionProjects-btn--lightbox"></button>
+                        <button class="SectionProjects-btn--lightbox">&#8203;</button>
                     </li>
                 </ul>
             </div>
@@ -197,13 +197,18 @@ Estructura general:
             <div class="SectionContact-help">
                 <h3 class="SectionContact-h3">¿Cómo podemos ayudarte?</h3>
                 <form action="#" method="get" class="SectionContact-form">
+                    <label for="nombre" class="SectionContact-label hidden">Nombre</label>
                     <input type="text" name="nombre" id="nombre" class="SectionContact-input" placeholder="Nombre*"
                         required>
+                    <label for="apellido" class="SectionContact-label hidden">Apellido</label>
                     <input type="text" name="apellido" id="apellido" class="SectionContact-input"
                         placeholder="Apellido*" required>
+                    <label for="email" class="SectionContact-label hidden">Email</label>
                     <input type="email" name="email" id="email" class="SectionContact-input" placeholder="Email*"
                         required>
+                    <label for="telefono" class="SectionContact-label hidden">Teléfono</label>
                     <input type="tel" name="telefono" id="telefono" class="SectionContact-input" placeholder="Teléfono">
+                    <label for="asunto" class="SectionContact-label hidden">Asunto</label>
                     <select name="asunto" id="asunto" class="SectionContact-input" required>
                         <option value="subject" disabled selected>Asunto*</option>
                         <option value="informacion">Información sobre Servicios</option>
@@ -211,6 +216,7 @@ Estructura general:
                         <option value="colaboracion">Colaboración Profesional</option>
                         <option value="otros">Otros</option>
                     </select>
+                    <label for="text" class="SectionContact-label hidden">Mensaje</label>
                     <textarea name="text" id="text" cols="30" rows="10" class="SectionContact-text"
                         placeholder="Mensaje*" required></textarea>
                     <input type="submit" value="Enviar" class="SectionContact-submit">
