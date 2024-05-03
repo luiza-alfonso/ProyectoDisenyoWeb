@@ -455,6 +455,7 @@ footer {
 
 .Footer-img--logo {
     width: clamp(3.125rem, 0rem + 8.3333vw, 10rem);
+    margin: .9375rem 0;
 }
 
 .Footer-ul {
