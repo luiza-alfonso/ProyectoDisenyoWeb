@@ -10,10 +10,7 @@
 
 @font-face {
     font-family: "Montserrat";
-    src: url('../fonts/Montserrat-Regular.ttf'),
-        url('../fonts/Montserrat-Bold.ttf'),
-        url('../fonts/Montserrat-Medium.ttf'),
-        url('../fonts/Montserrat-SemiBold.ttf'),
+    src: url('../fonts/Montserrat-Regular.ttf');
 }
 
 html {
@@ -231,11 +228,10 @@ Estructura:
 
 .SectionTitle-bg {
     height: 80vh;
-    background-image: url(../img/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg);
-    /* Imágen que se adapta a los modos horizontales y verticales de pantalla */
+    background-image: url(../img/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash-vertical.webp); /* Imágen para el modo vertical */
     background-size: cover;
-    background-position: top 35% left 50%;
-    background-repeat: none;
+    background-position:center;
+    background-repeat: no-repeat;
     transform: translate(0, 0%);
     transition: opacity 2s ease-in;
     /* 2s de duración para que se pueda ver la imágen antes de que cambie la opacidad */
@@ -388,7 +384,7 @@ Estructura:
 .hidden {
     position: absolute;
     /* Oculta todas las etiquetas */
-    clip: rect(1px 1px 1px 1px);
+    clip-path: rect(1px 1px 1px 1px);
     border: 0;
     height: 1px;
     width: 1px;
@@ -494,14 +490,13 @@ footer {
 
     /* Imagen de fondo en modo horizontal */
     .SectionTitle-bg {
+        background-image: url(../img/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash-horizontal.webp); /* Imágen para el modo horizontal */
         width: 100vw;
-        background-position: top 35% left 0;
     }
 
     /* Sección Projects */
     .SectionProjects-article {
-        padding-top: 4rem;
-        /* Aumenta el espacio */
+        padding-top: 4rem; /* Aumenta el espacio */
     }
 
     /* Sección Map */
@@ -610,18 +605,24 @@ footer {
         width: 50%;
         max-width: 70rem;
         height: auto;
-        padding: 0 2% 2%;
-        background-color: var(--var-color-light-gray);
-        z-index: 992;
-        display: flex;
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
+        padding: 0 2% 2%;
+        background-color: var(--var-color-light-gray);
+        z-index: 992;
         opacity: 0;
         transform: scale(1);
         transition: all 0.5s ease;
         /* Transición para que el lightbox aparezca de manera fluida */
         pointer-events: none;
+    }
+
+    .flex-lightbox {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
     }
 
     .SectionProjects-lightbox.active {
@@ -637,7 +638,7 @@ footer {
     }
 
     .SectionProjects-btn {
-        font-size: var(--step-2);
+        font-size: var(--step-4);
         align-self: flex-end;
         margin: 2% 2%;
         border-style: none;
@@ -680,8 +681,9 @@ footer {
     }
 
     .SectionProjects-btn--lightbox {
-        width: 0.8rem;
-        height: 0.8rem;
+        width: 1rem;
+        height: 1rem;
+        font-size: var(--step-3);
         background-color: var(--var-color-gray);
         border-style: none;
         border-radius: 50%;
@@ -698,7 +700,7 @@ footer {
     .SectionProjects-btn--lightbox.active {
         background-color: var(--var-color-black);
         /* Cambia el color del botón de la imágen seleccionada en el lightbox */
-        transform: scale(1.5);
+        transform: scale(1.2);
     }
 
     /* Overlay para el fondo cuando el lightbox esté activo */
