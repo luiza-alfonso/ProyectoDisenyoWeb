@@ -4,7 +4,7 @@ const logoAlt = document.querySelector('.SectionTitle-h1');
 // Elemento de la imagen de fondo
 const backgroundDiv = document.querySelector('.SectionTitle-bg');
 
-// Una función que añade una clase al h1 cuando la página se carga
+// Una función que añade una clase al h1 cuando la página se carga 
 document.addEventListener('DOMContentLoaded', function () {
     logoAlt.classList.add('isLoaded');
 });
