@@ -99,7 +99,8 @@ Estructura:
 */
 header {
     width: 100vw;
-    position: fixed;
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-between;
     background-color: var(--var-color-white);
@@ -113,7 +114,7 @@ header {
 
 .Header-img {
     width: clamp(3.75rem, 0rem + 10vw, 12rem);
-    padding: .9375rem;
+    margin: .9375rem;
 }
 
 .Header-nav {
@@ -206,6 +207,7 @@ Estructura:
 */
 .SectionTitle {
     display: block;
+    position: relative;
 }
 
 .SectionTitle-h1 {
@@ -232,7 +234,7 @@ Estructura:
     background-image: url(../img/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg);
     /* Imágen que se adapta a los modos horizontales y verticales de pantalla */
     background-size: cover;
-    background-position: center;
+    background-position: top 35% left 50%;
     background-repeat: none;
     transform: translate(0, 0%);
     transition: opacity 2s ease-in;
@@ -490,9 +492,9 @@ footer {
     }
 
     /* Imagen de fondo en modo horizontal */
-    .SectionH1-bg {
+    .SectionTitle-bg {
         width: 100vw;
-        background-position: top 25% left 0;
+        background-position: top 35% left 0;
     }
 
     /* Sección Projects */
